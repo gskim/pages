@@ -31,6 +31,32 @@ var fun = function lang(l) {
 }
 ```
 
+```ts
+import { Global, Module } from '@nestjs/common'
+import { ConfigModule, ConfigService } from '@nestjs/config'
+import configuration from './configuration'
+import development from './development'
+import local from './local'
+import production from './production'
+import wwwtest from './wwwtest'
+
+@Global()
+@Module({
+	imports: [
+		ConfigModule.forRoot({
+			isGlobal: true,
+			cache: true,
+			load: [ configuration, process.env.NODE_ENV === 'production' ? production : process.env.NODE_ENV === 'wwwtest' ? wwwtest :
+				process.env.NODE_ENV === 'development' ? development : local ],
+	  }),
+	],
+	providers: [ ConfigService ],
+	exports: [ ConfigModule ],
+})
+export class CoreConfigModule {}
+
+```
+
 ```ruby
 # Ruby code with syntax highlighting
 GitHubPages::Dependencies.gems.each do |gem, version|

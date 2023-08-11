@@ -1,8 +1,8 @@
 # SEO Values
-title: Dracula GitHub Pages
-tagline: The renowned dark theme for ...
-description: The renowned dark theme for ...
-url: https://dracula.github.io/gh-pages/
+title: Gskim Pages
+tagline: tagline 한글 어떻게 나오니? ...
+description: description 여기선 한글 잘 나오니? ...
+url: https://gskim.github.io/pages/
 twitter: https://twitter.com/zenorocha
 logo: https://draculatheme.com/static/icons/pack-1/045-dracula.svg
 
@@ -11,12 +11,12 @@ google_analytics:
 
 # GitHub Values
 github:
-  owner_name: Dracula
-  owner_url: https://github.com/dracula
-  repository_url: https://github.com/dracula/gh-pages
+  owner_name: Gskim
+  owner_url: https://gskim.github.com/pages
+  repository_url: https://github.com/gskim
 
-show_downloads: true
-show_header: true
+show_downloads: false
+show_header: false
 remote_theme: "dracula/gh-pages"
 
 sass:
